@@ -1,61 +1,141 @@
-body {
+/* RESET */
+
+* {
   margin: 0;
-  font-family: Arial;
-  background: #000;
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/* BODY */
+body {
+font-family: Arial, sans-serif;
+background: #000;
+color: white;
 }
 
+/* HEADER */
 header {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  background: #111;
+background: #111;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 12px 15px;
 }
 
-.logo {
-  color: gold;
-  font-weight: bold;
+.logo img {
+height: 50px;
 }
 
-nav a {
-  color: white;
-  margin-left: 15px;
-  text-decoration: none;
+/* ICONES TOPO */
+.icons {
+font-size: 20px;
+color: white;
 }
 
+/* BANNER */
 .banner {
-  text-align: center;
-  padding: 60px;
-  background: linear-gradient(black, #222);
+position: relative;
 }
 
-.products {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.banner img {
+width: 100%;
+height: auto;
+display: block;
 }
 
+/* TEXTO SOBRE BANNER */
+.banner-text {
+position: absolute;
+top: 30%;
+left: 10%;
+}
+
+.banner-text h1 {
+font-size: 34px;
+font-weight: bold;
+}
+
+.banner-text p {
+color: #ff2c2c;
+font-size: 18px;
+margin-top: 5px;
+}
+
+/* PRODUTOS */
+.container {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 12px;
+padding: 12px;
+}
+
+/* CARD */
 .card {
-  background: #1a1a1a;
-  margin: 15px;
-  padding: 15px;
-  border-radius: 10px;
-  width: 200px;
-  text-align: center;
-  transition: 0.3s;
+background: #111;
+padding: 10px;
+border-radius: 10px;
+text-align: center;
+transition: 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05);
+transform: scale(1.05);
 }
 
+/* IMAGEM PRODUTO */
 .card img {
-  width: 100%;
+width: 100%;
+border-radius: 10px;
 }
 
+/* NOME */
+.card h4 {
+margin: 8px 0;
+}
+
+/* PREÇO */
+.price {
+color: gold;
+font-weight: bold;
+}
+
+/* BOTÃO */
 button {
-  background: gold;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+background: #ff2c2c;
+color: white;
+border: none;
+padding: 8px;
+width: 100%;
+border-radius: 5px;
+margin-top: 5px;
+cursor: pointer;
+transition: 0.2s;
+}
+
+button:hover {
+background: #cc0000;
+}
+
+/* WHATSAPP */
+.whatsapp {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: green;
+padding: 15px;
+border-radius: 50%;
+color: white;
+text-decoration: none;
+font-size: 18px;
+}
+
+/* RESPONSIVO (CELULAR) */
+@media (max-width: 600px) {
+.banner-text h1 {
+font-size: 24px;
+}
+
+.banner-text p {
+font-size: 14px;
+}
 }
