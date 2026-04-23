@@ -3,47 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vision Up Store</title>
-<link rel="stylesheet" href="style.css">
+<title>Vision Up</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #000;
+  color: white;
+}
+
+/* TOPO */
+header {
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.icons {
+  font-size: 20px;
+}
+
+/* BANNER PRINCIPAL */
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+.banner-text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.banner-text h1 {
+  font-size: 35px;
+  margin: 0;
+}
+
+.banner-text p {
+  color: red;
+  font-size: 18px;
+}
+
+/* PRODUTOS */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.card {
+  background: #111;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.price {
+  color: gold;
+}
+
+button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* WHATSAPP FIXO */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+</style>
+
 </head>
+
 <body>
 
 <header>
-  <div class="logo">VISION UP</div>
-  <nav>
-    <a href="#">Início</a>
-    <a href="#">Produtos</a>
-    <a href="#">Contato</a>
-  </nav>
+  <div class="logo">
+    <img src="logo.png">
+  </div>
+
+  <div class="icons">
+    🔍 🛒
+  </div>
 </header>
 
-<section class="banner">
-  <h1>🔥 Camisas de Time 2025</h1>
-  <p>Qualidade Premium</p>
-</section>
+<!-- BANNER -->
+<div class="banner">
+  <img src="banner.png">
 
-<section class="products">
+  <div class="banner-text">
+    <h1>TAILANDESA</h1>
+    <p>PRONTA ENTREGA</p>
+  </div>
+</div>
+
+<!-- PRODUTOS -->
+<div class="container">
 
   <div class="card">
-    <img src="https://via.placeholder.com/200">
-    <h3>Cruzeiro 25/26</h3>
-    <p>R$ 89,90</p>
-    <button onclick="comprar()">Comprar</button>
+    <img src="produto1.png">
+    <h4>Cruzeiro 25/26</h4>
+    <p class="price">R$ 89,90</p>
+    <button>Comprar</button>
   </div>
 
   <div class="card">
-    <img src="https://via.placeholder.com/200">
-    <h3>Flamengo 25/26</h3>
-    <p>R$ 99,90</p>
-    <button onclick="comprar()">Comprar</button>
+    <img src="produto2.png">
+    <h4>Flamengo 25/26</h4>
+    <p class="price">R$ 99,90</p>
+    <button>Comprar</button>
   </div>
 
-</section>
+</div>
 
-<footer>
-  <p>© 2026 Vision Up</p>
-</footer>
+<a class="whatsapp" href="https://wa.me/5599999999999">💬</a>
 
-<script src="script.js"></script>
 </body>
 </html>
