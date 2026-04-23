@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #000;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #111;
+}
+
+.logo {
+  color: gold;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.banner {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(black, #222);
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1a1a1a;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+}
+
+button {
+  background: gold;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
